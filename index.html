@@ -1,0 +1,556 @@
+<html>
+    <head>
+        <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+        <style>
+
+*, *::before, *::after {
+                box-sizing: border-box;
+                font-family: 'Inter';
+            }
+
+:root {
+    --text: #efe7e7;
+    --bg: #140101;
+    --primary: #fa6c76;
+    --secondary: #88171b;
+    --accent: #f2be2a;
+    --text5: hsl(0, 20%, 92%, 5%);
+    --text10: hsl(0, 20%, 92%, 10%);
+    --text15: hsl(0, 20%, 92%, 15%);
+    --text20: hsl(0, 20%, 92%, 20%);
+    --text25: hsl(0, 20%, 92%, 25%);
+    --text30: hsl(0, 20%, 92%, 30%);
+    --text35: hsl(0, 20%, 92%, 35%);
+    --text40: hsl(0, 20%, 92%, 40%);
+    --text45: hsl(0, 20%, 92%, 45%);
+    --text50: hsl(0, 20%, 92%, 50%);
+    --text55: hsl(0, 20%, 92%, 55%);
+    --text60: hsl(0, 20%, 92%, 60%);
+    --text65: hsl(0, 20%, 92%, 65%);
+    --text70: hsl(0, 20%, 92%, 70%);
+    --text75: hsl(0, 20%, 92%, 75%);
+    --text80: hsl(0, 20%, 92%, 80%);
+    --text85: hsl(0, 20%, 92%, 85%);
+    --text90: hsl(0, 20%, 92%, 90%);
+    --text95: hsl(0, 20%, 92%, 95%);
+    --primary5: hsl(356, 93%, 70%, 5%);
+    --primary10: hsl(356, 93%, 70%, 10%);
+    --primary15: hsl(356, 93%, 70%, 15%);
+    --primary20: hsl(356, 93%, 70%, 20%);
+    --primary25: hsl(356, 93%, 70%, 25%);
+    --primary30: hsl(356, 93%, 70%, 30%);
+    --primary35: hsl(356, 93%, 70%, 35%);
+    --primary40: hsl(356, 93%, 70%, 40%);
+    --primary45: hsl(356, 93%, 70%, 45%);
+    --primary50: hsl(356, 93%, 70%, 50%);
+    --primary55: hsl(356, 93%, 70%, 55%);
+    --primary60: hsl(356, 93%, 70%, 60%);
+    --primary65: hsl(356, 93%, 70%, 65%);
+    --primary70: hsl(356, 93%, 70%, 70%);
+    --primary75: hsl(356, 93%, 70%, 75%);
+    --primary80: hsl(356, 93%, 70%, 80%);
+    --primary85: hsl(356, 93%, 70%, 85%);
+    --primary90: hsl(356, 93%, 70%, 90%);
+    --primary95: hsl(356, 93%, 70%, 95%);
+    --secondary5: hsl(358, 71%, 31%, 5%);
+    --secondary10: hsl(358, 71%, 31%, 10%);
+    --secondary15: hsl(358, 71%, 31%, 15%);
+    --secondary20: hsl(358, 71%, 31%, 20%);
+    --secondary25: hsl(358, 71%, 31%, 25%);
+    --secondary30: hsl(358, 71%, 31%, 30%);
+    --secondary35: hsl(358, 71%, 31%, 35%);
+    --secondary40: hsl(358, 71%, 31%, 40%);
+    --secondary45: hsl(358, 71%, 31%, 45%);
+    --secondary50: hsl(358, 71%, 31%, 50%);
+    --secondary55: hsl(358, 71%, 31%, 55%);
+    --secondary60: hsl(358, 71%, 31%, 60%);
+    --secondary65: hsl(358, 71%, 31%, 65%);
+    --secondary70: hsl(358, 71%, 31%, 70%);
+    --secondary75: hsl(358, 71%, 31%, 75%);
+    --secondary80: hsl(358, 71%, 31%, 80%);
+    --secondary85: hsl(358, 71%, 31%, 85%);
+    --secondary90: hsl(358, 71%, 31%, 90%);
+    --secondary95: hsl(358, 71%, 31%, 95%);
+    --accent5: hsl(44, 88%, 56%, 5%);
+    --accent10: hsl(44, 88%, 56%, 10%);
+    --accent15: hsl(44, 88%, 56%, 15%);
+    --accent20: hsl(44, 88%, 56%, 20%);
+    --accent25: hsl(44, 88%, 56%, 25%);
+    --accent30: hsl(44, 88%, 56%, 30%);
+    --accent35: hsl(44, 88%, 56%, 35%);
+    --accent40: hsl(44, 88%, 56%, 40%);
+    --accent45: hsl(44, 88%, 56%, 45%);
+    --accent50: hsl(44, 88%, 56%, 50%);
+    --accent55: hsl(44, 88%, 56%, 55%);
+    --accent60: hsl(44, 88%, 56%, 60%);
+    --accent65: hsl(44, 88%, 56%, 65%);
+    --accent70: hsl(44, 88%, 56%, 70%);
+    --accent75: hsl(44, 88%, 56%, 75%);
+    --accent80: hsl(44, 88%, 56%, 80%);
+    --accent85: hsl(44, 88%, 56%, 85%);
+    --accent90: hsl(44, 88%, 56%, 90%);
+    --accent95: hsl(44, 88%, 56%, 95%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.webp') no-repeat center/cover;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: 'Martel';
+    src: url('martel.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+    font-family: 'Martel';
+    font-size: 3rem;
+    color: var(--accent);
+    text-shadow:
+    0 -0.00625em 0.025em var(--bg),
+    0 -0.0125em 0.0625em var(--accent),
+    0 -0.0625em 0.125em var(--secondary),
+    0 -0.1125em 0.25em var(--primary);
+    user-select: none;
+    padding: 0.5rem;
+}
+
+.menu {
+    background-color: var(--bg);
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+a:link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.monsters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.monster {
+    background-color: var(--secondary20);
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.5em;
+    padding: 2rem 4rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 300ms ease;
+}
+
+.monster:hover {
+    border-color: var(--accent);
+    background-color: var(--secondary40);
+    cursor: pointer;
+    transform: translateY(-5%);
+}
+
+.card-active {
+    border-color: var(--accent);
+    background-color: var(--secondary40);
+    cursor: pointer;
+    transform: translateY(-5%);
+}
+
+.monster > span {
+    user-select: none;
+}
+
+.monster > img {
+    user-select: none;
+}
+
+.title {
+    font-size: 2rem;
+}
+
+.description {
+}
+
+.title-container > div {
+    background-color: var(--primary10);
+    padding: 2rem 4rem;;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body:has(dialog[open]) > .overlay {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  transition: all 300ms ease;
+}
+
+dialog[open] {
+  position: fixed;
+  border-radius: 0.5em;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: var(--secondary);
+  border-color: transparent;
+  color: var(--text);
+  width: 50vw;
+  min-height: 80vh;
+}
+
+.monster-loot {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.loot-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 3rem;
+}
+
+.item-chance {
+    font-size: 0.75rem;
+}
+
+.dialog-close {
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    color: var(--text);
+    border-style: unset;
+    border-radius: 0.5em;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    outline: solid 1px var(--text);
+    font-size: 1.25rem;
+    transition: all 300ms ease;
+    
+}
+
+.dialog-close:hover {
+    cursor: pointer;
+    transform: translateY(-5%);
+    color: var(--accent);
+    outline-color: var(--accent)
+}
+
+.dialog-title {
+    font-size: 2rem;
+    border-style: solid;
+    border-color: var(--accent);
+    border-width: 0px;
+    border-bottom-width: 1px;
+    width: 100%;
+}
+
+.dialog-name {
+    font-size: 3rem;
+}
+
+.statistics {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.statistic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statistic-name {
+    font-weight: bold;
+}
+
+.statistic-value {
+
+}
+
+
+.combats {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.combat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+        </style>
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <div class="menu">
+            <div class="logo">Tibinha</div>
+            <a href="#">menu item</a>
+            <a href="#">menu item</a>
+            <a href="#">menu item</a>
+            <a href="#">menu item</a>
+        </div>
+
+        <div class="title-container">
+            <div>
+                <div class="title">Monsters</div>
+                <div class="description">You can find out all information about the monsters here f.e. loot, experience, damage etc.</div>
+            </div>
+        </div>
+
+        <div class="monsters">
+            <div class="monster" id="behemoth-card">
+                <span>Behemoth</span>
+                <img src="https://outfit-images.ots.me/772/outfit.php?id=55" height="64px" width="64px">
+            </div>
+            <div class="monster" id="firedevil-card">
+                <span>Fire Devil</span>
+                <img src="https://outfit-images.ots.me/772/outfit.php?id=40" height="64px" width="64px">
+            </div>
+        </div>
+
+        <dialog id="behemoth-dialog">
+            <button autofocus class="dialog-close" id="behemoth-close">X</button>
+            <div class="dialog-name">Behemoth</div>
+            <img src="https://outfit-images.ots.me/772/outfit.php?id=55" width="64px" height="64px">
+            <div class="dialog-title">Statistics</div>
+            <div class="statistics">
+                <div class="statistic">
+                    <span class="statistic-name">Health</span>
+                    <span class="statistic-value">2137</span>
+                </div>
+                <div class="statistic">
+                    <span class="statistic-name">Experience</span>
+                    <span class="statistic-value">666</span>
+                </div>
+                <div class="statistic">
+                    <span class="statistic-name">Speed</span>
+                    <span class="statistic-value">420</span>
+                </div>
+                <div class="statistic">
+                    <span class="statistic-name">Armor</span>
+                    <span class="statistic-value">69</span>
+                </div>
+            </div>
+            <div class="dialog-title">Combat</div>
+            <div class="combats">
+                <div class="combat">
+                    <div class="combat-icon"><?xml version="1.0" encoding="utf-8"?>
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 0H13L3.70711 9.29289L2.20711 7.79289L0.792893 9.20711L3.08579 11.5L1.5835 13.0023C1.55586 13.0008 1.52802 13 1.5 13C0.671573 13 0 13.6716 0 14.5C0 15.3284 0.671573 16 1.5 16C2.32843 16 3 15.3284 3 14.5C3 14.472 2.99923 14.4441 2.99771 14.4165L4.5 12.9142L6.79289 15.2071L8.20711 13.7929L6.70711 12.2929L16 3V0Z" fill="#f2be2a"/>
+                        </svg></div>
+                    <div class="combat-damage">123</div>
+                </div>
+                <div class="combat">
+                    <div class="combat-icon"><?xml version="1.0" encoding="utf-8"?>
+                        <svg width="16px" height="16px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 0L11.5 0.5V1.5L12.5572 2.0286L10.9057 3.68016C9.55098 2.62709 7.84872 2 6 2C4.33262 2 2.78439 2.5101 1.50283 3.38275C1.22497 3.57196 0.959638 3.77821 0.708351 4C0.457776 4.22116 0.221162 4.45778 0 4.70835L3.52452 8.23288L4.93874 6.81866L2.95096 4.83089C3.84475 4.3023 4.88659 4 6 4C7.29584 4 8.49573 4.4108 9.47656 5.10927L4.58583 10H3.00004L4.01735e-05 13L2.00004 14L3.00004 16L6.00004 13V11.4142L10.8908 6.52349C11.5892 7.5043 12 8.70418 12 10C12 11.1134 11.6977 12.1552 11.1691 13.049L9.18138 11.0613L7.76717 12.4755L11.2916 16C11.5422 15.7788 11.7788 15.5422 12 15.2916C12.2218 15.0404 12.428 14.775 12.6172 14.4972C13.4899 13.2156 14 11.6674 14 10C14 8.1513 13.3729 6.44906 12.3199 5.09438L13.9714 3.44281L14.5 4.5H15.5L16 0Z" fill="#f2be2a"/>
+                        </svg></div>
+                    <div class="combat-damage">456</div>
+                </div>
+                <div class="combat">
+                    <div class="combat-icon"><?xml version="1.0" encoding="utf-8"?>
+                        <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.84453 3.84453C2.71849 4.97056 2.71849 6.79623 3.84453 7.92226L5.43227 9.51C5.44419 9.49622 5.45669 9.48276 5.46978 9.46967L9.46978 5.46967C9.48284 5.45662 9.49625 5.44415 9.50999 5.43226L7.92226 3.84453C6.79623 2.71849 4.97056 2.71849 3.84453 3.84453Z" fill="#f2be2a"/>
+                        <path d="M10.5679 6.49012C10.556 6.50386 10.5435 6.51728 10.5304 6.53033L6.53044 10.5303C6.51735 10.5434 6.5039 10.5559 6.49011 10.5678L16.0777 20.1555C17.2038 21.2815 19.0294 21.2815 20.1555 20.1555C21.2815 19.0294 21.2815 17.2038 20.1555 16.0777L10.5679 6.49012Z" fill="#f2be2a"/>
+                        <path d="M16.1 2.30719C16.261 1.8976 16.8385 1.8976 16.9994 2.30719L17.4298 3.40247C17.479 3.52752 17.5776 3.62651 17.7022 3.67583L18.7934 4.1078C19.2015 4.26934 19.2015 4.849 18.7934 5.01054L17.7022 5.44252C17.5776 5.49184 17.479 5.59082 17.4298 5.71587L16.9995 6.81115C16.8385 7.22074 16.261 7.22074 16.1 6.81116L15.6697 5.71587C15.6205 5.59082 15.5219 5.49184 15.3973 5.44252L14.3061 5.01054C13.898 4.849 13.898 4.26934 14.3061 4.1078L15.3973 3.67583C15.5219 3.62651 15.6205 3.52752 15.6697 3.40247L16.1 2.30719Z" fill="#f2be2a"/>
+                        <path d="M19.9672 9.12945C20.1281 8.71987 20.7057 8.71987 20.8666 9.12945L21.0235 9.5288C21.0727 9.65385 21.1713 9.75284 21.2959 9.80215L21.6937 9.95965C22.1018 10.1212 22.1018 10.7009 21.6937 10.8624L21.2959 11.0199C21.1713 11.0692 21.0727 11.1682 21.0235 11.2932L20.8666 11.6926C20.7057 12.1022 20.1281 12.1022 19.9672 11.6926L19.8103 11.2932C19.7611 11.1682 19.6625 11.0692 19.5379 11.0199L19.14 10.8624C18.732 10.7009 18.732 10.1212 19.14 9.95965L19.5379 9.80215C19.6625 9.75284 19.7611 9.65385 19.8103 9.5288L19.9672 9.12945Z" fill="#f2be2a"/>
+                        <path d="M5.1332 15.3072C5.29414 14.8976 5.87167 14.8976 6.03261 15.3072L6.18953 15.7065C6.23867 15.8316 6.33729 15.9306 6.46188 15.9799L6.85975 16.1374C7.26783 16.2989 7.26783 16.8786 6.85975 17.0401L6.46188 17.1976C6.33729 17.2469 6.23867 17.3459 6.18953 17.471L6.03261 17.8703C5.87167 18.2799 5.29414 18.2799 5.1332 17.8703L4.97628 17.471C4.92714 17.3459 4.82852 17.2469 4.70393 17.1976L4.30606 17.0401C3.89798 16.8786 3.89798 16.2989 4.30606 16.1374L4.70393 15.9799C4.82852 15.9306 4.92714 15.8316 4.97628 15.7065L5.1332 15.3072Z" fill="#f2be2a"/>
+                        </svg></div>
+                    <div class="combat-damage">789</div>
+                </div>
+            </div>
+            <div class="dialog-title">Loot</div>
+            <div class="monster-loot">
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+                <div class="loot-item">
+                    <img class="item-image" src="https://item-images.ots.me/772/2534.png" alt="2893" width="32" height="32">
+                    <span class="item-name">Vampire Shield</span>
+                    <span class="item-chance">10%</span>
+                </div>
+            </div>
+        </dialog>
+        <dialog id="firedevil-dialog">
+            <button autofocus id="firedevil-close" class="dialog-close">X</button>
+            <p>nothing here to see</p>
+        </dialog>
+
+        <script>
+        const behemothCard = document.querySelector("#behemoth-card");
+        const behemothDialog = document.querySelector("#behemoth-dialog");
+        const behemothClose = document.querySelector("#behemoth-close");
+
+        behemothCard.addEventListener('click', () => {
+            behemothDialog.show();
+            behemothCard.classList.toggle('card-active');
+        });
+
+        behemothClose.addEventListener('click', () => {
+            behemothDialog.close();
+            behemothCard.classList.toggle('card-active');
+        });
+
+        const firedevilCard = document.querySelector("#firedevil-card");
+        const firedevilDialog = document.querySelector("#firedevil-dialog");
+        const firedevilClose = document.querySelector("#firedevil-close");
+
+        firedevilCard.addEventListener('click', () => {
+            firedevilDialog.show();
+            firedevilCard.classList.toggle('card-active');
+        });
+
+        firedevilClose.addEventListener('click', () => {
+            firedevilDialog.close();
+            firedevilCard.classList.toggle('card-active');
+        });
+
+        </script>
+    </body>
+</html>
